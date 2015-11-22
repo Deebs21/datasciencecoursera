@@ -1,0 +1,18 @@
+{
+    "contents" : "pollutantmean <- function(directory, pollutant, id)\n{\n  directory <- (\"./specdata/\")\n  pollutant <- (\"sulfate\")\n  id <- 4:50\n\n  mean_pollution <- c()\n  allfiles <- list.files(directory, pattern = \".csv\")\n  selectfiles <- paste(directory, allfiles)\n  for (i in id)\n    {\n      dataset <- read.csv(selectfiles[i])\n      head(dataset)\n      pollutant\n      badrecords <- dataset[!is.na(dataset[,pollutant]), pollutant]\n      mean_pollution <- c(mean_pollution, badrecords)\n    }\n  \n  mean_result <- mean(mean_pollution)\n  return(mean_result)\n  \n}\n\n",
+    "created" : 1441764059303.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1993203536",
+    "id" : "68263D74",
+    "lastKnownWriteTime" : 1441802052,
+    "path" : "~/Coursera - Data Science Specialization/R Programming/Project/pollutantmean.R",
+    "project_path" : "pollutantmean.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
